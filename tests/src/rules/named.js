@@ -191,6 +191,9 @@ ruleTester.run('named', rule, {
       },
     })),
 
+    // Flow Enums
+    test({ code: 'import { Status } from "./flowEnum"' }),
+
     testVersion('>=7.8.0', () =>({ code: 'const { something } = require("./dynamic-import-in-commonjs")',
       parserOptions: { ecmaVersion: 2021 },
       options: [{ commonjs: true }],
